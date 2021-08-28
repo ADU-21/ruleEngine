@@ -1,0 +1,25 @@
+allprojects {
+    group 'com.adu21'
+    version '1.0-SNAPSHOT'
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+}
+
+project(':RuleReader') {
+    dependencies {
+        compile project(':RuleProcessor')
+    }
+}
+
+project(':RuleProcessor') {
+}

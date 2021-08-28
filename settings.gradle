@@ -1,0 +1,4 @@
+rootProject.name = 'RuleEngine'
+include 'RuleReader'
+include 'RuleProcessor'
+
